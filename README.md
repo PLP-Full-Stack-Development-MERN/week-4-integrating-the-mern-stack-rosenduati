@@ -1,75 +1,61 @@
-**Week 4: MERN Stack Integration Project**
+# Task Manager 📝
 
-**Objective:**
+A full-stack Task Manager app that allows users to manage their tasks effectively. It includes user authentication, task categorization, and due dates. Built using the MERN stack (MongoDB, Express.js, React, Node.js) and JWT for authentication.
 
-- Develop a full-stack web application using the MERN stack.
-- Apply backend and frontend integration skills.
-- Practice RESTful API development and consumption.
-- Implement CRUD operations and proper project structuring.
+## 🚀 Features
 
-**Project Suggestion:** Build a "Task Manager" application where users can create, read, update, and delete tasks. Each task should include fields like title, description, status, and due date.
+- **User Authentication**: Secure login and signup using JWT (JSON Web Tokens).
+- **Task Management**: Users can create, update, and delete tasks.
+- **Task Categorization**: Tasks can be categorized as "Work" or "Personal."
+- **Due Dates**: Tasks can be assigned due dates for better time management.
+- **Responsive UI**: A clean, responsive user interface built with React and Tailwind CSS.
 
-**Instructions:**
+## 🔧 Tech Stack
 
-1. **Setup the Project:**
-   - Create a new project folder called `mern-task-manager`.
-   - Initialize both backend and frontend directories within the project.
-   - Install necessary dependencies such as Express, Mongoose, React, and Axios.
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, Express.js, MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
+- **Database**: MongoDB (NoSQL)
+- **Deployment**: (Your chosen deployment method)
 
-2. **Backend Development:**
-   - Set up an Express server and connect to MongoDB.
-   - Create a `Task` model with the following fields:
-     - `title` (String, required)
-     - `description` (String)
-     - `status` (String, default: 'pending', enum: ['pending', 'in progress', 'completed'])
-     - `dueDate` (Date)
-   - Implement RESTful API routes to:
-     - Create a new task
-     - Retrieve all tasks
-     - Update a task by ID
-     - Delete a task by ID
-   - Use environment variables for database connection.
+## ⚡ How to Run Locally
 
-3. **Frontend Development:**
-   - Set up a React project and configure routing.
-   - Create components:
-     - `TaskList` to display all tasks.
-     - `TaskForm` to add or update tasks.
-     - `TaskItem` to show an individual task.
-   - Implement forms to capture task details.
-   - Use Axios to make API requests to the backend.
-   - Implement UI styling using Tailwind CSS.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/PLP-Full-Stack-Development-MERN/week-4-integrating-the-mern-stack-rosenduati
+   cd Task-Manager
+2.Install backend dependencies:
 
-4. **State Management:**
-   - Use React's `useState` and `useEffect` hooks to manage task state.
-   - Handle user interactions such as adding, updating, and deleting tasks.
+cd backend
+npm install
 
-5. **Testing:**
-   - Run the backend server and test API endpoints using Postman.
-   - Run the React app and ensure API calls work correctly.
-   - Verify CRUD operations.
+3.Install frontend dependencies:
+cd ../frontend
+npm install
+4.Set up environment variables:
 
-6. **Project Deployment:**
-   - Deploy the backend to a cloud platform such as Render.
-   - Deploy the frontend to Vercel.
-   - Ensure proper connection between frontend and backend.
+In the backend folder, create a .env file and add your MongoDB URI and JWT secret key:
+env
+Copy
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+Start the backend server:
 
-7. **Documentation:**
-   - Write a `README.md` file including:
-     - Project overview
-     - Installation steps
-     - API endpoint documentation
-     - Features and usage guide
+cd backend
+npm start
+Start the frontend server:
 
-8. **Submission:**
-   - Push your project to your GitHub repository.
+cd ../frontend
+npm start
+Open your browser and go to http://localhost:3000 to access the app.
 
-**Evaluation Criteria:**
+📌 Future Improvements
+Task Priority: Allow users to prioritize tasks (e.g., Low, Medium, High).
 
-- Proper project setup and folder structuring.
-- Working CRUD operations in both frontend and backend.
-- Correct use of React state and hooks.
-- Well-structured API endpoints with appropriate error handling.
-- A functional and user-friendly UI with Tailwind CSS.
-- Clear and concise documentation.
+Dark Mode: Add a dark mode for better user experience.
+
+Notifications: Implement task reminders and notifications for due tasks.
+
+Search & Filter: Add task search and filtering functionality.
+
 
